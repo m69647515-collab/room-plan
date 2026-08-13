@@ -13,7 +13,7 @@
       list = list.filter((a) => rank[a.severity] >= rank.high);
     // BUG: equal-severity alerts are ordered by id instead of preserving arrival order.
     list.sort(
-      (a, b) => rank[b.severity] - rank[a.severity] || a.id.localeCompare(b.id),
+      (a, b) => rank[b.severity] - rank[a.severity]
     );
     return list;
   }
